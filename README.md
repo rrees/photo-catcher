@@ -1,2 +1,3 @@
-# photo-catcher
-App for recording image URLs and searching them
+# Heroku Flask Template
+
+A template project for getting a Flask application running quickly on Heroku.
