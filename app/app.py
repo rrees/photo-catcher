@@ -5,6 +5,9 @@ import flask
 
 from flask_sslify import SSLify
 
+from app.auth_password.lifecycle import logged_in_before_request
+from app.auth_password.routes import auth_routes
+
 from . import handlers
 from . import redis_utils
 
@@ -22,9 +25,12 @@ if not ENV == "DEV":
 
 logger = app.logger
 
+app.before_request(logged_in_before_request)
+
 routes = [
 	('/', 'index', handlers.pages.front_page, ['GET']),
-]
+	('/home', 'home', handlers.pages.home_page, ['GET']),
+] + auth_routes
 
 for path, endpoint, handler, methods in routes:
 	app.add_url_rule(path, endpoint, handler, methods=methods)
