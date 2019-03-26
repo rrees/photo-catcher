@@ -11,6 +11,7 @@ redis = "*"
 Flask = "*"
 Flask-SSLify = "*"
 wtforms = "*"
+dataset = "*"
 
 [requires]
 python_version = "3.7"

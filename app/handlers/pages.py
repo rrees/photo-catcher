@@ -5,3 +5,6 @@ def front_page():
 
 def home_page():
 	return flask.render_template('home.html')
+
+def capture_page():
+	return flask.render_template('capture.html')
