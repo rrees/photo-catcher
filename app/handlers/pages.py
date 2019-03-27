@@ -8,3 +8,7 @@ def home_page():
 
 def capture_page():
 	return flask.render_template('capture.html')
+
+
+def photos_list():
+	return flask.render_template('photos.html')

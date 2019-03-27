@@ -31,6 +31,7 @@ routes = [
 	('/', 'index', handlers.pages.front_page, ['GET']),
 	('/home', 'home', handlers.pages.home_page, ['GET']),
 	('/capture', 'capture', handlers.pages.capture_page, ['GET']),
+	('/photos', 'photos_list', handlers.pages.photos_list, ['GET']),
 ] + auth_routes
 
 for path, endpoint, handler, methods in routes:
